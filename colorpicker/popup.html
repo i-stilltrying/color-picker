@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@300;400&display=swap" rel="stylesheet">
+    <title>Document</title>
+    <style>
+        #mainCont {
+            min-width: 15px;
+            width: max-content;
+            
+            color: rgb(106, 2, 2);
+            background-color:#FBEAEB
+
+        }
+
+        #mainCont>h1 {
+            font-family: 'Inconsolata', monospace;
+            
+            margin: 0;
+            margin-bottom: 15px;
+            text-align: center;
+            font-size: 30px;
+        }
+
+        #picker_btn {
+            padding: 15px 17px;
+            border-radius: 10px;
+            background-color: white;
+            border: 1px solid black;
+            font-size: 15px;
+            width: 90%;
+            text-align: center;
+            margin: 0px 0px;
+            margin-left: 5px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        #picker_btn:hover {
+            background-color: black;
+            color: white;
+        }
+
+        #result {
+            list-style: none;
+            grid-gap: 10px;
+            padding: 0;
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+        }
+
+        #result>li {
+            cursor: pointer;
+            padding: 2px 5px;
+            font-weight: bolder;
+            font-size: 15px;
+            border: 1px solid black;
+            border-radius: 5px;
+            text-shadow: 0.5px 0.5px 0 #cfcfcf, -0.5px -0.5px 0 #cfcfcf, 0.5px -0.5px 0 #cfcfcf, -0.5px 0.5px 0 #cfcfcf;
+        }
+
+        .errorLabel {
+            color: white;
+            font-weight: bold;
+            padding: 5px;
+            text-align: center;
+            margin: 0;
+            margin-top: 20px;
+            font-size: 14px;
+            border-radius: 10px;
+        }
+
+        #ClearButton {
+            padding: 5px 7px;
+            /* border-radius: 10px; */
+            background-color: rgb(53, 51, 51);
+            color: white;
+            border: 2px solid rgb(32, 45, 38);
+            font-size: 15px;
+            width: 100%;
+            text-align: center;
+            margin: 0px 0px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        #ClearButton:hover {
+            background-color: rgb(139, 137, 137);
+            color: rgb(255, 255, 255);
+        }
+    </style>
+</head>
+
+<body>
+    <div id="mainCont">
+        <h1><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-eyedropper" viewBox="0 0 16 16">
+            <path d="M13.354.646a1.207 1.207 0 0 0-1.708 0L8.5 3.793l-.646-.647a.5.5 0 1 0-.708.708L8.293 5l-7.147 7.146A.5.5 0 0 0 1 12.5v1.793l-.854.853a.5.5 0 1 0 .708.707L1.707 15H3.5a.5.5 0 0 0 .354-.146L11 7.707l1.146 1.147a.5.5 0 0 0 .708-.708l-.647-.646 3.147-3.146a1.207 1.207 0 0 0 0-1.708l-2-2zM2 12.707l7-7L10.293 7l-7 7H2v-1.293z"/>
+          </svg>  Color Picker</h1>
+        <hr>
+       
+        <button type="button" class="btn btn-info" id="picker_btn_cont">Pick color from the web page</button><hr>
+        <ul id="result">
+        </ul>
+    </div>
+</body>
+<script src="popup.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</html>
